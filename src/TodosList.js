@@ -1,9 +1,18 @@
 import React from 'react'
 import Button from './Button'
 
+const itemdivstyle = {
+  width : '100%',
+  height : '5vh',
+  display : 'flex', 
+  justifyContent : 'center',
+  alignItems : 'center'
+}
+
+
 const TodoItem = ({itemtext}) => (
-  <div style={{width : '100%', display : 'flex', justifyContent : 'center'}}>
-    <input id={itemtext} type='checkbox'/>
+  <div style={itemdivstyle}>
+    <input type='checkbox' style={{marginRight : 10}}/>
     <label style={{display : 'inline-block',width : '50%'}} htmlFor={itemtext}>{itemtext}</label>
     <Button type='remove'/>
   </div>
