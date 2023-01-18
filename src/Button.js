@@ -6,6 +6,16 @@ export default function Button({type}) {
   const iconstyle = {
     width : 18
   }
+  const plusstyle = {
+    padding : 0,
+    backgroundColor : 'none',
+    background : 'none',
+    border : 'none',
+    cursor : 'pointer',
+    position: 'relative',
+    top: "-89%",
+    left: "92%"
+  }
   const buttonstyle = {
     padding : 0,
     backgroundColor : 'none',
@@ -19,16 +29,6 @@ export default function Button({type}) {
   }
 
   if (type === 'add') {
-    const plusstyle = {
-      padding : 0,
-      backgroundColor : 'none',
-      background : 'none',
-      border : 'none',
-      cursor : 'pointer',
-      position: 'relative',
-      top: "-89%",
-      left: "92%"
-    }
     return (
       <button style={plusstyle} ><img src={plusicon} alt='add' style={iconstyle} /> </button>
     )

@@ -18,7 +18,7 @@ const TodoItem = ({itemtext}) => (
   </div>
 )
 
-const arraytodos = ['thing1', 'thing2', 'thing5']
+const arraytodos = ['thing1', 'thing2', 'thifssefsefesng5']
 
 export default function TodosList() {
   const divstyle = {
