@@ -11,12 +11,12 @@ export default function TodoContainer() {
   const innerDiv = {
     display : 'flex',
     flexDirection : 'column',
-    // justifyContent : 'center',
     alignItems : 'center',
     width : '50vw'
   }
 
   const title='My todos'
+  const arraytodos = ['thing1', 'thing2', 'okay']
 
   return (
     <div style={outerDiv} >
@@ -24,7 +24,7 @@ export default function TodoContainer() {
         <div style={innerDiv}>
         <Header title={title}/>
         <InputTodo/>
-        <TodosList/>
+        <TodosList arraytodos={arraytodos} />
         </div>
     </div>
   )
