@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header({title}) {
   const style = {
-    color : '#c4c4c4',
+    color : '#dedede',
     fontSize : '100px'
   }
   return (

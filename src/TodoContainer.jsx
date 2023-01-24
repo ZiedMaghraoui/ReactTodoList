@@ -11,10 +11,12 @@ export default class TodoContainer extends Component {
     inp : ''
   }
 
+  title='My todos'
+
   handleChange = (e) => {
     const {name, value} = e.target
     this.setState({[name]: value})
-    console.log(this.state)
+    // console.log(this.state)
   }
   handleclick = () => {
     const inp = this.state.inp
@@ -41,13 +43,11 @@ export default class TodoContainer extends Component {
       width : '50vw'
     }
 
-    const title='My_todos'
-
     return (
       <div style={outerDiv} >
           <Navbar/>
           <div style={innerDiv}>
-          <Header title={title}/>
+          <Header title={this.title}/>
           <InputTodo change={this.handleChange} val={this.state.inp} add={this.handleclick} />
           <TodosList arraytodos={this.state.todos} rem={this.handleremove} />
           </div>

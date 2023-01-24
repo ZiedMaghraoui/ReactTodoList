@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './Button'
 
 const itemdivstyle = {
-  width : '100%',
+  width : '70%',
   height : '5vh',
   display : 'flex', 
   justifyContent : 'center',
@@ -10,8 +10,8 @@ const itemdivstyle = {
 }
 
 const labelstyle ={
-  display : 'inline-block',
-  width : '50%'
+  flexGrow : '128',
+  fontSize : 18
 }
 
 
@@ -30,7 +30,7 @@ const TodoItem = ({itemtext, rem}) => {
   
   return (
   <div style={itemdivstyle}>
-    <input type='checkbox' style={{marginRight : 10}} onClick={checktodo} />
+    <input type='checkbox' style={{marginRight : 10, flexGrow : '1'}} onClick={checktodo} />
     <label style={labelstyle} htmlFor={itemtext}>{itemtext}</label>
     <Button func={rem} type='remove'/>
   </div>

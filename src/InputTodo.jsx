@@ -11,7 +11,7 @@ export default function InputTodo({val,change,add}) {
   return (
     <div style={{width : '50%', marginBottom : '12px'}}>
       <input name='inp' type='text' value={val} onChange={change} 
-        placeholder='    Add todo...' style={inputStyle}/>
+        placeholder='  Add todo...' style={inputStyle}/>
       <Button func={add} type='add'/>
     </div>
   )

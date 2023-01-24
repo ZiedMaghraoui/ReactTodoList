@@ -22,6 +22,7 @@ export default function Button({type, func}) {
     background : 'none',
     border : 'none',
     cursor : 'pointer',
+    flexGrow : '1'
   }
 
   if (type === 'add') {
