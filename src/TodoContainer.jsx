@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { render } from 'react-dom'
 import Header from './Header'
 import InputTodo from './InputTodo'
 import Navbar from './Navbar'
@@ -34,7 +33,7 @@ export default class TodoContainer extends Component {
   
   render() {
     const outerDiv = {
-    display : 'flex'
+      display : 'flex',
     }
     const innerDiv = {
       display : 'flex',

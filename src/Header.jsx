@@ -3,7 +3,8 @@ import React from 'react'
 export default function Header({title}) {
   const style = {
     color : '#dedede',
-    fontSize : '100px'
+    fontSize : '650%',
+    marginBottom : '4%'
   }
   return (
     <div style={{width : '100%', display : 'flex', justifyContent : 'center'}}>

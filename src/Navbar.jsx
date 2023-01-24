@@ -7,7 +7,7 @@ export default function Navbar() {
     display : 'flex',
     flexDirection : 'column',
     width : '15vw',
-    height : '92vh',
+    height : '94.4vh',
     padding : 20
   }
   const iconstyle = {
@@ -17,17 +17,19 @@ export default function Navbar() {
     fontSize : 24,
     textDecoration : 'none',
     fontWeight : 'bold',
-    color : '#ff9d24'
+    color : '#ff9d24',
+    marginTop : '4%'
   }
   const aboutstyle = {
     color : '#00e3d0',
-    textDecoration : 'none'
+    textDecoration : 'none',
+    marginTop : '4%'
   }
   return (
     <div style={divstyle} >
-      <a href=''><img src={xicon}  style={iconstyle} alt='close'/></a>
-      <a style={homestyle} href=''>Home</a>
-      <a style={aboutstyle} href=''>About</a>
+      <a href='*'><img src={xicon}  style={iconstyle} alt='close'/></a>
+      <a style={homestyle} href='*'>Home</a>
+      <a style={aboutstyle} href='*'>About</a>
     </div>
   )
 }
