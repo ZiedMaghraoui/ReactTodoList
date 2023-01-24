@@ -15,20 +15,21 @@ export default class TodoContainer extends Component {
   handleChange = (e) => {
     const {name, value} = e.target
     this.setState({[name]: value})
-    // console.log(this.state)
   }
+
   handleclick = () => {
     const inp = this.state.inp
     const addedtodos = this.state.todos
-    addedtodos.push(inp)
-    this.setState({todos : addedtodos})
-    // console.log(this.state)
+    if (inp !== ''){
+      addedtodos.push(inp)
+      this.setState({todos : addedtodos, inp : ''})
+    }
   }
+
   handleremove = (e) => {
     const label = e.target.parentElement.previousSibling.innerText
     const remtodo = this.state.todos.filter((item) => (item !== label) )
     this.setState({todos : remtodo})
-    // console.log(remtodo)
   }
   
   render() {

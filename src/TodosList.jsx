@@ -1,21 +1,20 @@
 import React from 'react'
 import Button from './Button'
 
-const itemdivstyle = {
-  width : '70%',
-  height : '5vh',
-  display : 'flex', 
-  justifyContent : 'center',
-  alignItems : 'center'
-}
-
-const labelstyle ={
-  flexGrow : '128',
-  fontSize : 18
-}
-
-
+// ~~~~~~ Todo item component
 const TodoItem = ({itemtext, rem}) => {
+  const itemdivstyle = {
+    width : '70%',
+    marginBottom : '2%',
+    display : 'flex', 
+    alignItems : 'center'
+  }
+  
+  const labelstyle ={
+    flexGrow : '128',
+    fontSize : 18
+  }
+  
   const checktodo = (e) => {
     const check = e.target
     const label = check.nextSibling
@@ -36,8 +35,21 @@ const TodoItem = ({itemtext, rem}) => {
   </div>
 )}
 
-
+// ~~~~~~ Todo list component
 export default function TodosList({arraytodos, rem}) {
+  const todoliststyle = {
+    width : '100%',
+    display : 'flex',
+    flexDirection : 'column',
+    alignItems : 'center',
+    height : '50vh',
+    overflow : 'auto',
+  }
+  
   const formattedtodos = arraytodos.map((item) => (<TodoItem itemtext={item} rem={rem} key={item} />))
-  return (formattedtodos)
+  return ( 
+    <div style={todoliststyle} >
+      {formattedtodos}
+    </div>
+  )
 }

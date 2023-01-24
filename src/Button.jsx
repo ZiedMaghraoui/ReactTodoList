@@ -16,7 +16,7 @@ export default function Button({type, func}) {
     top: "-89%",
     left: "92%"
   }
-  const buttonstyle = {
+  const trashstyle = {
     padding : 0,
     backgroundColor : 'none',
     background : 'none',
@@ -32,7 +32,7 @@ export default function Button({type, func}) {
   }
   if (type === 'remove') {
     return (
-      <button onClick={func} style={buttonstyle}><img src={trashicon} alt='remove' style={iconstyle}/> </button>
+      <button onClick={func} style={trashstyle}><img src={trashicon} alt='remove' style={iconstyle}/> </button>
     )
   }
 }

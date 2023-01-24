@@ -25,6 +25,7 @@ export default function Navbar() {
     textDecoration : 'none',
     marginTop : '4%'
   }
+  
   return (
     <div style={divstyle} >
       <a href='*'><img src={xicon}  style={iconstyle} alt='close'/></a>
