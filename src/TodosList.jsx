@@ -15,27 +15,29 @@ const labelstyle ={
 }
 
 
-const TodoItem = ({itemtext}) => {
-  const checktodo = () => {
-    const check = document.querySelector('#'+itemtext)
+const TodoItem = ({itemtext, rem}) => {
+  const checktodo = (e) => {
+    const check = e.target
     const label = check.nextSibling
     if (check.checked){
       label.style.textDecoration = 'line-through'
+      label.style.color = 'gray'
     } else {
       label.style.textDecoration = 'none'
+      label.style.color = 'black'
     }
   }
   
   return (
   <div style={itemdivstyle}>
-    <input type='checkbox' id={itemtext} style={{marginRight : 10}} onClick={checktodo} />
+    <input type='checkbox' style={{marginRight : 10}} onClick={checktodo} />
     <label style={labelstyle} htmlFor={itemtext}>{itemtext}</label>
-    <Button type='remove'/>
+    <Button func={rem} type='remove'/>
   </div>
 )}
 
 
-export default function TodosList({arraytodos}) {
-  const formattedtodos = arraytodos.map((item) => (<TodoItem itemtext={item} key={item} />))
+export default function TodosList({arraytodos, rem}) {
+  const formattedtodos = arraytodos.map((item) => (<TodoItem itemtext={item} rem={rem} key={item} />))
   return (formattedtodos)
 }
