@@ -1,19 +1,19 @@
 import React from 'react'
 import Button from './Button'
 
+const itemdivstyle = {
+  width : '70%',
+  marginBottom : '2%',
+  display : 'flex', 
+  alignItems : 'center'
+}
+const labelstyle ={
+  flexGrow : '128',
+  fontSize : 18
+}
+
 // ~~~~~~ Todo item component
 const TodoItem = ({itemtext, rem}) => {
-  const itemdivstyle = {
-    width : '70%',
-    marginBottom : '2%',
-    display : 'flex', 
-    alignItems : 'center'
-  }
-  
-  const labelstyle ={
-    flexGrow : '128',
-    fontSize : 18
-  }
   
   const checktodo = (e) => {
     const check = e.target
@@ -33,23 +33,23 @@ const TodoItem = ({itemtext, rem}) => {
     <label style={labelstyle} htmlFor={itemtext}>{itemtext}</label>
     <Button func={rem} type='remove'/>
   </div>
-)}
+  )
+}
 
 // ~~~~~~ Todo list component
+const todoliststyle = {
+  width : '100%',
+  display : 'flex',
+  flexDirection : 'column',
+  alignItems : 'center',
+  height : '50vh',
+  overflow : 'auto',
+}
+
 export default function TodosList({arraytodos, rem}) {
-  const todoliststyle = {
-    width : '100%',
-    display : 'flex',
-    flexDirection : 'column',
-    alignItems : 'center',
-    height : '50vh',
-    overflow : 'auto',
-  }
-  
-  const formattedtodos = arraytodos.map((item) => (<TodoItem itemtext={item} rem={rem} key={item} />))
   return ( 
     <div style={todoliststyle} >
-      {formattedtodos}
+      {arraytodos.map((item) => (<TodoItem itemtext={item} rem={rem} key={item} />))}
     </div>
   )
 }

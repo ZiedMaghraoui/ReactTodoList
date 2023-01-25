@@ -4,6 +4,16 @@ import InputTodo from './InputTodo'
 import Navbar from './Navbar'
 import TodosList from './TodosList'
 
+const outerDiv = {
+  display : 'flex',
+}
+const innerDiv = {
+  display : 'flex',
+  flexDirection : 'column',
+  alignItems : 'center',
+  width : '50vw'
+}
+
 export default class TodoContainer extends Component {
   state = {
     todos : ['example of todo'],
@@ -33,16 +43,6 @@ export default class TodoContainer extends Component {
   }
   
   render() {
-    const outerDiv = {
-      display : 'flex',
-    }
-    const innerDiv = {
-      display : 'flex',
-      flexDirection : 'column',
-      alignItems : 'center',
-      width : '50vw'
-    }
-
     return (
       <div style={outerDiv} >
           <Navbar/>
