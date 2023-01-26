@@ -36,10 +36,10 @@ export default class TodoContainer extends Component {
     }
   }
 
-  handleremove = (e) => {
-    const label = e.target.parentElement.previousSibling.innerText
-    const remtodo = this.state.todos.filter((item) => (item !== label) )
-    this.setState({todos : remtodo})
+  handleremove = (index) => {
+    this.state.todos.splice(index, 1)
+    this.setState({todos : this.state.todos})
+
   }
   
   render() {

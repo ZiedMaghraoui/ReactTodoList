@@ -15,21 +15,9 @@ const labelstyle ={
 // ~~~~~~ Todo item component
 const TodoItem = ({itemtext, rem}) => {
   
-  const checktodo = (e) => {
-    const check = e.target
-    const label = check.nextSibling
-    if (check.checked){
-      label.style.textDecoration = 'line-through'
-      label.style.color = 'gray'
-    } else {
-      label.style.textDecoration = 'none'
-      label.style.color = 'black'
-    }
-  }
-  
   return (
   <div style={itemdivstyle}>
-    <input type='checkbox' style={{marginRight : 10, flexGrow : '1'}} onClick={checktodo} />
+    <input type='checkbox' style={{marginRight : 10, flexGrow : '1'}}  />
     <label style={labelstyle} htmlFor={itemtext}>{itemtext}</label>
     <Button func={rem} type='remove'/>
   </div>
@@ -49,7 +37,7 @@ const todoliststyle = {
 export default function TodosList({arraytodos, rem}) {
   return ( 
     <div style={todoliststyle} >
-      {arraytodos.map((item) => (<TodoItem itemtext={item} rem={rem} key={item} />))}
+      {arraytodos.map((item,index) => (<TodoItem itemtext={item} rem={() => {rem(index)} } key={item} />))}
     </div>
   )
 }
